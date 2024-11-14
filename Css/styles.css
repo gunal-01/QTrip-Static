@@ -94,6 +94,27 @@ footer {
     align-items: center;
     color: white;
     text-align: center;
+    padding: 0 15px;
+    /* Add padding for smaller screens */
+}
+
+.hero-image h1 {
+    font-size: 2.5rem;
+    /* Adjust text size for different screens */
+}
+
+.hero-image p {
+    font-size: 1.2rem;
+}
+
+.hero-image form input {
+    width: 100%;
+    /* Make input take full width on small screens */
+    max-width: 700px;
+    height: 50px;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
 }
 
 .hero-subheading {
@@ -113,6 +134,28 @@ footer {
     margin-right: 36px;
 }
 
+.responsive-search {
+    width: 900px !important;
+    max-width: 100%;
+    /* This helps it adapt to smaller screens */
+}
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    .responsive-search {
+        width: 100% !important;
+        /* Full width on smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 576px) {
+    .responsive-search {
+        width: 100% !important;
+        /* Full width on very small screens */
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -125,16 +168,40 @@ footer {
     justify-content: center;
 }
 
-.col-md-3, .col-sm-6 {
+.col-md-3,
+.col-sm-6 {
     padding: 10px;
 }
 
 .img-fluid {
     width: 100% !important;
-    height: 450px !important; /* Adjust as needed */
+    height: 450px !important;
+    /* Adjust as needed */
     object-fit: cover !important;
     border-radius: 8px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adjust the number of columns for various screen sizes */
+@media only screen and (max-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1200px) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 }
 
 /* ================================== */
